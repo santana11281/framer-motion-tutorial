@@ -3,6 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
+      <a href="/">
       <div className="logo">
         <svg className="pizza-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
           <path
@@ -15,6 +16,7 @@ const Header = () => {
           />
         </svg>
       </div>
+      </a>
       <div className="title">
         <h1>Pizza Joint</h1>
       </div>
