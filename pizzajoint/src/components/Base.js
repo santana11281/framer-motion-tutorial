@@ -1,51 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {containerVariants} from './Framer-motion/SlideAnimation'
 
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
-  const nextVariants ={
-
-    hidden:{
-      x:'-100vw'
-    },
-    visible:{
-     x:0
-
-  
-    },
-    transition:{ 
-      type: "spring", 
-      stiffness: 300 
-    }
-  }
-
-  const containerVariants = {
+  const nextVariants = {
     hidden: {
-      opacity: 0,
-      x: "100vw",
+      x: "-100vw",
     },
     visible: {
-      opacity: 1,
       x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
     },
-    transition:{ 
-      type: "spring", 
-      stiffness: 300 
-    }
-    };
+  };
 
   return (
     <motion.div
       className="base container"
-
       animate={{ x: 0 }}
       variants={containerVariants}
-      transition='transition'
-      initial='hidden'
-      animate='visible'
-
+      transition="transition"
+      initial="hidden"
+      animate="visible"
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
@@ -73,9 +54,7 @@ const Base = ({ addBase, pizza }) => {
         <motion.div
           className="next"
           variants={nextVariants}
-          initial={'hidden'}
-          animate={'visible'}
-          transition={'transition'}
+      
         >
           <Link to="/toppings">
             <motion.button

@@ -1,25 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import {containerVariants} from './Framer-motion/SlideAnimation'
+
 
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
 
-  const containerVariants = {
+  const nextVariants = {
     hidden: {
-      opacity: 0,
-      x: "100vw",
+      x: "-100vw",
     },
     visible: {
-      opacity: 1,
-      x: -10,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
     },
-    transition:{ 
-      type: "spring", 
-      stiffness: 300 
-    }
-    };
+  };
+
 
   return (
     <motion.div className="toppings container"
