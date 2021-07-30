@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { containerVariants, childVariants,} from "./Framer-motion/SlideAnimation";
 
 const Order = ({ pizza }) => {

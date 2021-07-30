@@ -1,19 +1,21 @@
- export const containerVariants = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
+export const containerVariants = {
+  hidden: { 
+    opacity: 0, 
+    x: '100vw',
     transition: {
-      type: "spring",
-      mass:0.4,
-      damping:8,
-      when:'beforeChildren',
-      staggerChildren:2
-      
-    },
+      staggerChildren: 0.5,
+    } 
+  },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { 
+      type: 'spring',
+      mass: 0.4,
+      damping: 8,
+      staggerChildren: 0.4,
+      when: "beforeChildren",
+    }
   },
 };
 
@@ -35,11 +37,10 @@ export const buttonVariant = {
   
 
  export const childVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      
-    }
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
   }
+}
