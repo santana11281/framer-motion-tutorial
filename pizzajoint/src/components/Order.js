@@ -19,12 +19,11 @@ const Order = ({ pizza }) => {
  <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
       <motion.div variants={childVariants}>
         
-        {pizza.toppings.map(topping => (
-          <div key={topping}>{topping}</div>
-        ))}
+      {pizza.toppings.map(topping => <div key={topping} >{topping}</div>)}
       </motion.div>
+      
     </motion.div>
-  );
-};
+  )
+}
 
 export default Order;
