@@ -40,14 +40,6 @@ export const buttonVariant = {
     },
     visible: {
       opacity: 1,
-      transition: {
-        type: "spring",
-        mass:0.4,
-        damping:8,
-        when:'beforeChildren',
-        staggerChildren:2
-        
-      }
       
     }
   }
