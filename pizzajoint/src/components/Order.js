@@ -9,14 +9,12 @@ import { containerVariants, childVariants,} from "./Framer-motion/SlideAnimation
 
 const Order = ({ pizza }) => {
   return (
-    <motion.div
-      className="container order"
+    <motion.div className="container order"
       variants={containerVariants}
       initial="hidden"
-      animate="visible">
-
+      animate="visible"
+    >
       <h2>Thank you for your order :)</h2>
-
       <motion.p variants={childVariants}>
     You ordered a {pizza.base} pizza with:</motion.p>
 
