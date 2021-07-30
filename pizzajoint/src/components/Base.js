@@ -6,6 +6,7 @@ import {containerVariants , buttonVariant} from './Framer-motion/SlideAnimation'
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
+
   const nextVariants = {
     hidden: {
       x: "-100vw",
@@ -22,11 +23,12 @@ const Base = ({ addBase, pizza }) => {
   return (
     <motion.div
       className="base container"
-      animate={{ x: 0 }}
       variants={containerVariants}
       transition="transition"
       initial="hidden"
       animate="visible"
+      exit="exit"
+
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>

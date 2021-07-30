@@ -13,10 +13,11 @@ export const containerVariants = {
       type: 'spring',
       mass: 0.4,
       damping: 8,
-      staggerChildren: 0.4,
+      staggerChildren: 0.5,
       when: "beforeChildren",
     }
-  },
+  },exit:{  x:'-100vh',  transition:{  ease:'easeInOut' }
+}
 };
 
 

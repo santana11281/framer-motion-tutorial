@@ -8,18 +8,6 @@ const Toppings = ({ addTopping, pizza }) => {
   let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
 
-  const nextVariants = {
-    hidden: {
-      x: "-100vw",
-    },
-    visible: {
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-  };
 
 
   return (
@@ -30,6 +18,7 @@ const Toppings = ({ addTopping, pizza }) => {
     transition='transition'
     initial='hidden'
     animate='visible'
+    exit="exit"
     
     >
       
