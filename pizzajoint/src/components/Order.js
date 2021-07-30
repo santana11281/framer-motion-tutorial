@@ -1,36 +1,43 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { containerVariants } from "./Framer-motion/SlideAnimation";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {containerVariants,childVariants } from './Framer-motion/SlideAnimation'
 
-const childVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
+
+
 
 const Order = ({ pizza }) => {
+  const [showTitle, setShowTitle] = useState(true);
+  
+  setTimeout(() => {
+    setShowTitle(false);
+  }, 4000);
+
   return (
-    <motion.div
-      className="container order"
+    <motion.div className="container order"
       variants={containerVariants}
-      transition="transition"
       initial="hidden"
       animate="visible"
     >
-      <h2>Thank you for your order :)</h2>
-      <motion.p variants={childVariant}>
-        You ordered a {pizza.base} pizza with:
-      </motion.p>
-      {pizza.toppings.map((topping) => (
-        <motion.div variants={childVariant} key={topping}>
-          {topping}
-        </motion.div>
-      ))}
+   
+    
+          <h2>Thank you for your order :)</h2>
+
+
+
+
+      <motion.p  >You ordered a {pizza.base} pizza with:</motion.p>
+      <motion.div
+      
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      
+      >
+        {pizza.toppings.map(topping => <div key={topping} >{topping}</div>)}
+      </motion.div>
+      
     </motion.div>
-  );
-};
+  )
+}
 
 export default Order;

@@ -9,9 +9,9 @@
     transition: {
       type: "spring",
       mass:0.4,
-      damping:90,
+      damping:8,
       when:'beforeChildren',
-      staggerChildren:0.4
+      staggerChildren:2
       
     },
   },
@@ -33,3 +33,21 @@ export const buttonVariant = {
   
   }
   
+
+ export const childVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        type: "spring",
+        mass:0.4,
+        damping:8,
+        when:'beforeChildren',
+        staggerChildren:2
+        
+      }
+      
+    }
+  }
