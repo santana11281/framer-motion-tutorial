@@ -13,8 +13,8 @@ const Order = ({ pizza }) => {
     >
       <h2>Thank you for your order :)</h2>
       <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
-      <div variants={childVariants}>
-        {aaa.map(topping => <motion.div variants={childVariants} key={topping} >{topping}</motion.div>)}
+      <div>
+        {pizza.toppings.map(topping => <motion.div variants={childVariants} key={topping} >{topping}</motion.div>)}
       </div>
       
     </motion.div>
