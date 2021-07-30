@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion,AnimatePresence } from "framer-motion";
-import { buttonVariant, containerVariants } from "./Framer-motion/SlideAnimation";
+
 
 
 const backdrop ={
+    hidden:{opacity:0},
+visible:{opacity:1}
 
-visible:{opacity:1},
-hidden:{opacity:0}
 
 }
 
 
-function Modal({ showModal,setModal }) {
+function Modal({ showModal,setShowModal }) {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && <motion.div className="backdrop"
       variants={backdrop}
-      animate="visible"
       initial="hidden"
+      animate="visible"
       >
           
           </motion.div>}

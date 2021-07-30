@@ -1,10 +1,28 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import { motion } from 'framer-motion';
 import {containerVariants , childVariants } from './Framer-motion/SlideAnimation'
 
 const aaa = ["mmg",'mmg',"mmg",'mmg']
 
-const Order = ({ pizza }) => {
+const Order = ({ pizza ,setModal}) => {
+
+
+
+useEffect(() => {
+  
+setTimeout(() => {
+  
+
+  setModal(true)
+  
+}, 2000)
+
+
+}, [setModal])
+
+
+
+
   return (
     <motion.div className="container order"
       variants={containerVariants}
