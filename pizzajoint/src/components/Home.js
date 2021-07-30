@@ -1,32 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { buttonVariant } from "./Framer-motion/SlideAnimation";
+import { buttonVariant, containerVariants } from "./Framer-motion/SlideAnimation";
 
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: { opacity: 1, 
-    transition: {  delay: 1.5, duration: 1.5  }},
 
-    exit:{  x:'-100vh',  transition:{  ease:'easeInOut' }
-    }
-};
 
-// const containerVariants = {
-//   hidden: { 
-//     opacity: 0, 
-//   },
-//   visible: { 
-//     opacity: 1, 
-//     transition: { delay: 1.5, duration: 1.5 }
-//   },
-//   exit: {
-//     x: "-100vh",
-//     transition: { ease: 'easeInOut' }
-//   }
-// };
 
 
 const Home = () => {
