@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { containerVariants, childVariants,} from "./Framer-motion/SlideAnimation";
+import React from 'react';
+import { motion } from 'framer-motion';
+import {containerVariants , childVariants } from './Framer-motion/SlideAnimation'
 
-
-
-
-
+const aaa = ["mmg",'mmg',"mmg",'mmg']
 
 const Order = ({ pizza }) => {
   return (
@@ -15,12 +12,10 @@ const Order = ({ pizza }) => {
       animate="visible"
     >
       <h2>Thank you for your order :)</h2>
-
- <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
-      <motion.div variants={childVariants}>
-        
-      {pizza.toppings.map(topping => <div key={topping} >{topping}</div>)}
-      </motion.div>
+      <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
+      <div variants={childVariants}>
+        {aaa.map(topping => <motion.div variants={childVariants} key={topping} >{topping}</motion.div>)}
+      </div>
       
     </motion.div>
   )
