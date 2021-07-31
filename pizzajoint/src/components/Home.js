@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Loader from "./Loader";
 import { buttonVariant, containerVariants } from "./Framer-motion/SlideAnimation";
 
 
@@ -16,6 +17,7 @@ const Home = () => {
     animate="visible"
     exit="exit"
     >
+      <Loader></Loader>
       <h2> Welcome to Pizza Joint</h2>
 
       <Link to="/base">
