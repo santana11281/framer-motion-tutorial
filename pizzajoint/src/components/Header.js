@@ -30,8 +30,13 @@ const Header = () => {
   return (
     <header>
       <a href="/">
-      <div className="logo">
+      <motion.div
+      className="logo"
+      drag>
+      
         <motion.svg 
+
+    
         variants={svgVariants}
         initial="hidden"
         animate="visible"
@@ -48,7 +53,7 @@ const Header = () => {
             variants={pathVariants}
           />
         </motion.svg>
-      </div>
+      </motion.div>
       </a>
       <motion.div className="title"
       initial={{y:-250}}
