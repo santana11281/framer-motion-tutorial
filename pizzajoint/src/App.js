@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-      <Modal showModal={setShowModal}/>
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
 
       <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.key}  >
@@ -41,7 +41,7 @@ function App() {
           <Toppings addTopping={addTopping} pizza={pizza} />
         </Route>
         <Route path="/order">
-          <Order pizza={pizza} setModal={setShowModal} />
+          <Order pizza={pizza} setShowModal={setShowModal} />
         </Route>
         <Route path="/">
           <Home />

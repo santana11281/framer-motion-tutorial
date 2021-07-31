@@ -1,10 +1,10 @@
-import {React,useEffect} from 'react';
+import React,{useEffect} from 'react';
 import { motion } from 'framer-motion';
 import {containerVariants , childVariants } from './Framer-motion/SlideAnimation'
 
 const aaa = ["mmg",'mmg',"mmg",'mmg']
 
-const Order = ({ pizza ,setModal}) => {
+const Order = ({ pizza ,setShowModal}) => {
 
 
 
@@ -13,12 +13,12 @@ useEffect(() => {
 setTimeout(() => {
   
 
-  setModal(true)
+  setShowModal(true)
   
 }, 2000)
 
 
-}, [setModal])
+}, [setShowModal])
 
 
 
